@@ -124,29 +124,13 @@ ros2 launch rm_demo demo.launch.py publish_period:=0.5
 ros2 topic hz /system_status
 ```
 
-## 评分（自动 80 分）
-
-| 项目 | 分值 |
-|---|---:|
-| `colcon build` 成功 | 10 |
-| 必需节点存在 | 10 |
-| ROS graph、话题和类型正确 | 15 |
-| `monitor_node` 行为正确 | 20 |
-| `publish_period` 参数正确且能影响频率 | 10 |
-| launch 一次启动完整系统 | 10 |
-| 持续运行稳定 | 5 |
-| **自动评分合计** | **80** |
-
-另外 20 分由管理员人工评阅：README/验证过程、代码结构/可读性、Git 提交过程。
-
 ## 提交方式
 
-1. 只修改你自己的 GitHub private repository。
+1. 只修改你自己的 GitHub repository。
 2. 不要修改或删除基础节点的核心行为。
 3. 不要提交 `build/`、`install/`、`log/`、`.venv/` 等生成目录。
 4. 提交前确认代码已经 `git add`、`git commit`、`git push`。
-5. 在网站上确认最新 commit 后，点击“运行自动验收”。
-6. 可以反复修改和验收；确认最终版本后再点击“提交最终版本”。
+5. 将你的 GitHub 仓库链接和最终 commit 提交给管理员。
 
 ## 常见问题
 
@@ -163,8 +147,7 @@ source install/setup.bash
 
 检查 `setup.py` 的 `console_scripts` 和 `demo.launch.py` 是否都已经加入 `monitor_node`。
 
-### 自动验收失败
+### 程序运行结果不符合预期
 
 先在本地依次检查：节点列表、话题类型、`ros2 node info /monitor_node`、参数值、`ros2 topic echo /system_status` 和 launch 参数 `publish_period:=0.5`。
 
-不要把隐藏测试代码放进仓库；验收程序会在隔离的 ROS 2 Humble Docker 容器中运行。
