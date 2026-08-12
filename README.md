@@ -131,7 +131,7 @@ ros2 topic hz /system_status
 3. 不要提交 `build/`、`install/`、`log/`、`.venv/` 等生成目录。
 4. 提交前确认代码已经 `git add`、`git commit`、`git push`。
 5. 请自建一个 GitHub repository，将本作业代码推送到自己的仓库。
-6. 将 GitHub 仓库链接通过 QQ 私信发送给管理员，并备注姓名和学号。
+6. 将 GitHub 仓库链接通过 QQ 私信发送给算法招新群管理员Zyaire，并备注姓名和学号。
 
 ## 常见问题
 
